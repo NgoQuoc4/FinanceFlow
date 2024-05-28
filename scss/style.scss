@@ -1,0 +1,25 @@
+// core
+@import "core/reset.scss";
+@import "core/mixins.scss";
+@import "core/variables.scss";
+
+
+@import "core/_libs.scss";
+
+@import "core/layouts.scss";
+@import "core/components.scss";
+
+@import "core/header.scss";
+@import "core/footer.scss";
+
+@import "core/nav.scss";
+
+// page
+@import "page/home.scss";
+@import "page/404.scss";
+@import "page/about.scss";
+@import "page/pricing.scss";
+@import "page/tokens.scss";
+@import "page/blog.scss";
+@import "page/contact.scss";
+@import "page/blog-detail.scss";

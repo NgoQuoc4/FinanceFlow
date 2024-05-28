@@ -1,0 +1,94 @@
+.scpricing{
+    padding-top: calc(var(--height-header) + 40px );
+    padding-bottom: 225px ;
+    .scpricing__textbox{
+        
+    }
+    .scpricing__list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 38px;
+        margin-bottom: 56px;
+        margin-top: 40px;
+        .scpricing__list-item {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            
+        }
+    }
+    .scpricing__box{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--gap);
+        .scpricing__box-item{
+            background-color: var(--cl-blue);
+            border-radius: 40px;
+            padding: 48px 32px 40px;
+            .textbox{
+                margin-bottom: 40px;
+                .textbox__tag{
+                    background-color: var(--cl-light-blue);
+                    width: fit-content;
+                    padding: 0 15px;
+                    border-radius: 999px;
+                }
+                .textbox__heading{
+                    margin: 16px 0;
+                }
+            }
+            .info{
+                margin-bottom: 54px;
+                ul{
+                    margin-top: 16px;
+                    li{
+                        padding-left: 22px;
+                        position: relative;
+                        &::after{
+                        content: "";
+                        @include circle-box(6px, 6px, true);
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        background-color: var(--cl-light-blue);
+                        transform: translate(0, -50%);
+                }
+                    }
+                    li:not(:last-child){
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+            .btn{
+                width: 100%;
+            }
+        }
+    }
+    @include md {
+        .scpricing__list{
+            gap: 20px;
+        }
+    }
+
+    @include sm{
+        padding-bottom: 80px;
+        .scpricing__list{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .scpricing__box{
+            .scpricing__box-item{
+                grid-column: 1/4;
+            }
+         }
+    }
+    @include xxs{
+        padding-top: calc(var(--height-header) + 48px );
+        .scpricing__list{
+            grid-template-columns: 1fr;
+            margin-bottom: 31px;
+        }
+     
+    }
+}

@@ -1,0 +1,438 @@
+//grid
+@mixin gridDisplay($a: 1, $b: 1fr, $gap: var(--gap)) {
+  display: grid;
+  grid-template-columns: $a $b;
+  gap: $gap;
+}
+
+@mixin gridRepeat($a: 1, $b: 1fr, $gap: var(--gap)) {
+  display: grid;
+  grid-template-columns: repeat($a, $b);
+  gap: $gap;
+}
+
+//flex
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+//before
+@mixin before($w: 58px, $h: 5px) {
+  &:before,
+  &::before {
+    content: "";
+    width: $w;
+    height: $h;
+    background-color: var(--cl-yellow);
+    top: 50%;
+    left: -14px;
+    transform: translate(-100%, -100%);
+    position: absolute;
+  }
+}
+//after
+@mixin after($w: 30px, $h: 2px) {
+  &:after,
+  &::after {
+    content: "";
+    width: $w;
+    height: $h;
+    background-color: var(--cl-yellow);
+    bottom: -6px;
+    left: 0;
+    // transform: translate(-100%,-100%);
+    position: absolute;
+  }
+}
+
+// Overflow Text Dots
+@mixin overText($line) {
+  display: -webkit-inline-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+//tao hinh vuon tron
+@mixin circle-box($w, $h: $w, $circle: false) {
+  width: $w;
+  height: $h;
+  @if $circle {
+    border-radius: 100%;
+  }
+}
+
+// Frame Img
+@mixin frameimg($w, $h: $w) {
+  aspect-ratio: $w/$h;
+  position: relative;
+  overflow: hidden;
+}
+
+// Middle Img
+@mixin midimg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+///animation direction top
+@mixin animation-direction-top {
+  position: relative;
+  animation: mymovetop 3s infinite;
+  -webkit-animation: mymovetop 3s infinite;
+  -moz-animation: mymovetop 3s infinite;
+  -ms-animation: mymovetop 3s infinite;
+  -o-animation: mymovetop 3s infinite;
+  @keyframes mymovetop {
+    0% {
+      top: 0px;
+    }
+
+    50% {
+      top: 20px;
+    }
+
+    100% {
+      top: 0px;
+    }
+  }
+
+  @-webkit-keyframes mymovetop {
+    0% {
+      top: 0px;
+    }
+
+    50% {
+      top: 20px;
+    }
+
+    100% {
+      top: 0px;
+    }
+  }
+  @-moz-keyframes mymovetop {
+    0% {
+      top: 0px;
+    }
+
+    50% {
+      top: 20px;
+    }
+
+    100% {
+      top: 0px;
+    }
+  }
+  @-ms-keyframes mymovetop {
+    0% {
+      top: 0px;
+    }
+
+    50% {
+      top: 20px;
+    }
+
+    100% {
+      top: 0px;
+    }
+  }
+  @-o-keyframes mymovetop {
+    0% {
+      top: 0px;
+    }
+
+    50% {
+      top: 20px;
+    }
+
+    100% {
+      top: 0px;
+    }
+  }
+}
+
+@mixin animation-direction-left {
+  position: relative;
+  animation: mymoveleft 3s infinite;
+  -webkit-animation: mymoveleft 3s infinite;
+  -moz-animation: mymovetop 3s infinite;
+  -ms-animation: mymovetop 3s infinite;
+  -o-animation: mymovetop 3s infinite;
+  @keyframes mymoveleft {
+    0% {
+      left: 0px;
+    }
+
+    50% {
+      left: 12px;
+    }
+
+    100% {
+      left: 0px;
+    }
+  }
+
+  @-webkit-keyframes mymoveleft {
+    0% {
+      left: 0px;
+    }
+
+    50% {
+      left: 12px;
+    }
+
+    100% {
+      left: 0px;
+    }
+  }
+
+  @-moz-keyframes mymoveleft {
+    0% {
+      left: 0px;
+    }
+
+    50% {
+      left: 12px;
+    }
+
+    100% {
+      left: 0px;
+    }
+  }
+  @-ms-keyframes mymoveleft {
+    0% {
+      left: 0px;
+    }
+
+    50% {
+      left: 12px;
+    }
+
+    100% {
+      left: 0px;
+    }
+  }
+  @-o-keyframes mymoveleft {
+    0% {
+      left: 0px;
+    }
+
+    50% {
+      left: 12px;
+    }
+
+    100% {
+      left: 0px;
+    }
+  }
+}
+
+// laptop
+// laptop lớn , screen <= 1140px
+@mixin lg {
+  @media screen and (max-width: 1140px) {
+    @content;
+  }
+}
+// laptop nho hoac tablet lon screen <1200px
+@mixin md {
+  @media screen and (max-width: 1199.98px) {
+    @content;
+  }
+}
+// tablets
+// tablets vua, screen <= 992px
+@mixin sm {
+  @media screen and (max-width: 991.98px) {
+    @content;
+  }
+}
+// tablets nho hoac phones quay ngang , screen < 768px
+@mixin xs {
+  @media screen and (max-width: 767.98px) {
+    @content;
+  }
+}
+// mobile
+// phones lon, screen < 576px
+@mixin xxs {
+  @media screen and (max-width: 575.98px) {
+    @content;
+  }
+}
+// phone nho , screen < 376px
+@mixin xxxs {
+  @media screen and (max-width: 375.98px) {
+    @content;
+  }
+}
+// landscape man hinh quay ngang
+@mixin landscape {
+  @media screen and (orientation: landscape) {
+    @content;
+  }
+}
+// @media max, min
+@mixin maxW($args) {
+  @media (max-width: $args) {
+    @content;
+  }
+}
+@mixin minW($args) {
+  @media (min-width: $args) {
+    @content;
+  }
+}
+@mixin maxH($args) {
+  @media (max-height: $args) {
+    @content;
+  }
+}
+@mixin minH($args) {
+  @media (min-height: $args) {
+    @content;
+  }
+}
+
+//////////////////////////////////////
+
+// CSS Animation - Transition
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  animation: #{$str};
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+}
+@mixin animation-delay($str) {
+  animation-delay: #{$str};
+  -webkit-animation-delay: #{$str};
+  -moz-animation-delay: #{$str};
+  -ms-animation-delay: #{$str};
+  -o-animation-delay: #{$str};
+}
+@mixin transform($args) {
+  transform: $args;
+  -webkit-transform: $args;
+  -moz-transform: $args;
+  -ms-transform: $args;
+  -o-transform: $args;
+}
+
+@mixin transform-origin($args) {
+  transform-origin: $args;
+  -webkit-transform-origin: $args;
+  -moz-transform-origin: $args;
+  -ms-transform-origin: $args;
+  -o-transform-origin: $args;
+}
+@mixin transition-delay($args) {
+  transition-delay: $args;
+  -webkit-transition-delay: $args;
+  -moz-transition-delay: $args;
+  -ms-transition-delay: $args;
+  -o-transition-delay: $args;
+}
+// transition Time
+@mixin transition($args: var(--duration)) {
+  transition: $args;
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+}
+
+// CSS Text
+@mixin text(
+  $font-family,
+  $font-size,
+  $line-height,
+  $color,
+  $text-transform: none
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+  text-transform: $text-transform;
+}
+
+// Middle Object
+@mixin mid($flex: false) {
+  @if $flex == false {
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+    position: absolute;
+  } @else {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// FullScreen
+@mixin fullscreen($fixed: false) {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  @if $fixed {
+    position: fixed;
+  } @else {
+    position: absolute;
+  }
+}
+
+// Visible
+@mixin visible($param: 1) {
+  @if $param == 1 {
+    opacity: 1;
+    visibility: visible;
+  } @else {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+// Overflow Text Dots
+@mixin overtext($lines: initial) {
+  display: -webkit-inline-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+// Customize Scroll Bar
+@mixin customscroll($width: 5px, $bgTrack: #ddd, $bgThumb: #121212) {
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $bgThumb;
+  }
+}

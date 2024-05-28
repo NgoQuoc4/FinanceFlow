@@ -1,0 +1,178 @@
+:root{
+    // color
+    
+    --cl-black:  #000;
+    --cl-white:  #ffffff;
+    --cl-red: #EE0303;
+    --cl-blue:#00116A;
+    --cl-light-blue: #0328EE;
+    --cl-dark-blue: #010725; 
+
+    // max width page
+    --max-width-page: 2560px;
+    // --max-width-container-fluid: 1920px;
+    --max-width-container: calc(1198px + calc(var(--padding-container) * 2)); 
+    --padding-container: 28px;
+    --gap:26px;
+
+
+    // font-size
+    // font size  html = 62.5%
+
+    // font size pc
+    --text-uppercase: uppercase;
+    // Heading h1
+    --h1-fs: 6.6rem;
+    --h1-lh: 7.9992rem;
+    --h1-lp: -0.1rem;
+    --h1-ff: db;
+    // Heading h2
+    --h2-fs: 4.2rem;
+    --h2-lh: 5.5rem;
+    --h2-lp: 0;
+    --h2-ff: db;
+
+    // Heading h3
+    --h3-fs: 2.2rem;
+    --h3-lh: 3.0998rem;
+    --h3-lp: 0;
+    --h3-ff: db;
+    // h3 small
+    --h3-fs-s: 1.8rem;
+    --h3-lh-s: 2.599rem;
+    --h3-lp-s: 0.09rem;
+    --h3-ff-s: db;
+    --h3-fs-s-1: 2rem;
+    --h3-lh-s-1: 2.6rem;
+    --h3-lp-s-1: 0.1rem;
+
+
+    // Heading h5
+    --h5-fs: 1.6rem;
+    --h5-lh: 1.8rem;
+    --h5-lp: 0.08rem;
+    --h5-ff: db;
+
+    //  Text label
+    --text-label-fs: 1.8rem;
+    --text-label-lh: 2.6rem;
+    --text-label-lp: 0.09rem;
+    --text-label-ff: db;
+    // Text Button
+    --text-btn-fs: 1.6rem;
+    --text-btn-lh: 1.6rem;
+    --text-btn-lp: 0.16rem;
+    --text-btn-ff: db;
+    // Text Body 1
+    --text-bd-fs: 1.8rem;
+    --text-bd-lh: 3.2rem;
+    --text-bd-lp: 0;
+    --text-bd-ff: dr;
+    // Text Body 2
+    --text-bd-s-fs: 1.6rem;
+    --text-bd-s-lh: 2.6rem;
+    --text-bd-s-lp: 0;
+    --text-bd-ff: dr;
+    // Text Menu
+    --text-menu-fs: 1.4rem;
+    --text-menu-lh: 1.6rem;
+    --text-menu-lp: 0.14rem;
+    --text-menu-ff: dm;
+    // Text Tag
+    --text-tag-fs: 1.4rem;
+    --text-tag-lh: 1.8rem;
+    --text-tag-lp: 0.07rem;
+    --text-tag-ff: dm;
+    // number years
+    --text-num-fs: 2.8rem;
+    --text-num-lh: 2.5rem;
+    // --text-tag-lp: 0.07rem;
+    --text-num-ff: db;
+    
+    // width height
+    --height-header: 100px;
+    // --height-footer: 100px;
+
+    // button
+    --height-btn-main: 70px;
+    --height-btn-header: 56px;
+    --height-btn-s: 36px;
+    --height-btn-banner: 42px;
+    --height-btn-news: 36px;
+    --height-btn-footer: 33px;
+
+    --pd-section: 120px; 
+
+    // timing 
+    --duration:0.4s;
+    --cubic:  cubic-bezier(0.59, 0.29, 0.15, 0.93);
+
+    //responsive 
+    @include md{
+        --max-width-container:1140px;
+    }
+    @include sm{
+        --max-width-container:960px;
+        --pd-section:90px;
+        --height-header: 77px;
+
+    }
+    @include xs{
+        --max-width-container:720px;
+        --gap: 15px;
+        --pd-section:60px;
+        --padding-container:15px;
+
+        // font size
+        // Heading h1
+        --h1-fs: 3.8rem;
+        --h1-lh: 4.6rem;
+        --h1-lp: -0.1rem;
+        --h1-ff: db;
+        // Heading h2
+        --h2-fs: 2.8rem;
+        --h2-lh: 3.6rem;
+        --h2-lp: 0;
+        --h2-ff: db;
+        //  Text label
+        --text-label-fs: 1.4rem;
+        --text-label-lh: 1.8rem;
+        --text-label-lp: 0.07rem;
+        --text-label-ff: db;
+        // Text Button
+        --text-btn-fs: 1.6rem;
+        --text-btn-lh: 1.6rem;
+        --text-btn-lp: 0.16rem;
+        --text-btn-ff: db;
+        // Text Body 1
+        --text-bd-fs: 1.6rem;
+        --text-bd-lh: 2.6rem;
+        --text-bd-lp: 0;
+        --text-bd-ff: dr;
+        // Text Body 2
+        --text-bd-s-fs: 1.6rem;
+        --text-bd-s-lh: 2.6rem;
+        --text-bd-s-lp: 0;
+        --text-bd-ff: dr;
+        // Text Menu
+        --text-menu-fs: 3.2rem;
+        --text-menu-lh: 100%;
+        --text-menu-lp: 0.14rem;
+        --text-menu-ff: dm;
+        // Text Tag
+        --text-tag-fs: 1.4rem;
+        --text-tag-lh: 1.8rem;
+        --text-tag-lp: 0.07rem;
+        --text-tag-ff: dm;
+
+
+    }
+    @include xxs{
+        --height-header: 64px;
+
+        --height-btn-footer: 22px;
+        --max-width-container:100%;
+    }
+
+    
+}

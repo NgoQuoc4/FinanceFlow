@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>FinanceFlow - CFD Circle | Đào tạo lập trình thực chiến</title>
+
+    <meta name="title" content="FinanceFlow - CFD Circle | Đào tạo lập trình thực chiến" />
+    <meta name="description"
+        content="FinanceFlow là dự án được hoàn thành trong khoá học lập trình front-end Web Responsive tại CFD Circle" />
+    <meta name="keyword" content="" />
+
+    <!-- facebook -->
+    <meta property="og:locale" content="en" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="FinanceFlow - CFD Circle | Đào tạo lập trình thực chiến" />
+    <meta property="og:description"
+        content="FinanceFlow là dự án được hoàn thành trong khoá học lập trình front-end Web Responsive tại CFD Circle" />
+    <meta property="og:url" content="https://cfdcircle.vn" />
+    <meta property="og:site_name" content="CFD Circle" />
+    <meta property="og:image" content="img/thumbnail-facebook.jpg" />
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:site" content="" />
+    <meta property="twitter:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+
+
+    <style>
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            background-color: var(--cl-white);
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+            background-color: var(--cl-white);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--cl-blue);
+            border-radius: 999px;
+            height: 200px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--cl-light-blue);
+        }
+    </style>
+
+    <!-- link css -->
+    <link rel="stylesheet" href="dest/style.min.css">
+    <link rel="stylesheet" href="dest/fonts.css">
+</head>
+
+<body class="body">
+    <div class="propressbarheader"></div>
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__left">
+                <a href="./" class="header__left-logo">
+                    <img class="pc" src="img/logo-header.svg" alt="logo">
+                    <img class="mobi" src="img/logo-header-m.svg" alt="logo">
+                </a>
+                <div class="header__left-line"></div>
+                <ul class="header__left-menu --active-hover-menu">
+                    <li><a href="./" class="item --text-menu ">HOME</a></li>
+                    <li><a href="about.html" class="item --text-menu ">ABOUT</a></li>
+                    <li><a href="pricing.html" class="item --text-menu ">Pricing</a></li>
+                    <li><a href="tokens.html" class="item --text-menu --active">Tokens</a></li>
+                    <li><a href="blog.html" class="item --text-menu ">Blog</a></li>
+                    <li><a href="contact.html" class="item --text-menu ">contact us</a></li>
+                </ul>
+            </div>
+            <div class="header__cta --pointer --btntext">
+                <a class="header__cta-download --btn-main" href="https://cfdcircle.vn/" target="_blank">Download
+                    App</a>
+                <div class="header__cta-mobile --pointer">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- menu mobile -->
+    <nav class="menumobile">
+        <ul class="header__menu --active-hover-menu">
+            <li><a href="./" class="item --btntext --white ">HOME</a></li>
+            <li><a href="about.html" class="item --btntext --white">ABOUT</a></li>
+            <li><a href="pricing.html" class="item --btntext --white ">Pricing</a></li>
+            <li><a href="tokens.html" class="item --btntext --white --active">Tokens</a></li>
+            <li><a href="blog.html" class="item --btntext --white">Blog</a></li>
+            <li><a href="contact.html" class="item --btntext --white">contact us</a></li>
+            <a class="header__menu-download --btn-main --text-button --pointer">Download App</a>
+        </ul>
+        <img src="img/blur.png" class="menumobile__blur-thumb" alt="blur">
+    </nav>
+
+    <main class="main__pricing">
+
+        <section class="sctokens">
+            <div class="container">
+                <div class="sctokens__textbox --textbox-center">
+                    <h2 class="sctokens__textbox-heading heading --h2">Tokens</h2>
+                    <p class="sctokens__textbox-des des">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Feugiat nulla suspendisse tortor aenean dis placerat.
+                        Scelerisque</p>
+                </div>
+                <!-- <div class="sctokens__table col-1">
+                    <div class="sctokens__table-header">
+                        <div class="item col-1">Name</div>
+                        <div class="item">Description</div>
+                        <div class="item">Market Cap</a></div>
+                        <div class="item">Volume</div>
+                        <div class="item">Website</div>
+                    </div>
+                    <div class="sctokens__table-content">
+                        <div class="row">
+                            <div class="row__data col-1">
+                                <img src="img/bitcoin.svg" alt="">
+                                Bitcoin
+                                <p class="--tag-layout">BTC</p>
+                            </div>
+                            <div class="row__data">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                            <div class="row__data">$252,844,036,453 USD</div>
+                            <div class="row__data">$30,504,879,301 USD</div>
+                            <div class="row__data"><a href="#">Visit Website</a></div>
+                        </div>
+                        <div class="row">
+                            <div class="row__data col-1">
+                                <img src="img/ethereum.svg" alt="">
+                                Ethereum
+                                <p class="--tag-layout">ETH</p>
+                            </div>
+                            <div class="row__data">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                            <div class="row__data">$252,844,036,453 USD</div>
+                            <div class="row__data">$30,504,879,301 USD</div>
+                            <div class="row__data"><a href="#">Visit Website</a></div>
+                        </div>
+                        <div class="row">
+                            <div class="row__data col-1">
+                                <img src="img/litecoin.svg" alt="">
+                                Litecoin
+                                <p class="--tag-layout">LTC</p>
+                            </div>
+                            <div class="row__data">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                            <div class="row__data">$252,844,036,453 USD</div>
+                            <div class="row__data">$30,504,879,301 USD</div>
+                            <div class="row__data"><a href="#">Visit Website</a></div>
+                        </div>
+                        <div class="row">
+                            <div class="row__data col-1">
+                                <img src="img/tron.svg" alt="">
+                                TRON
+                                <p class="--tag-layout">TRX</p>
+                            </div>
+                            <div class="row__data">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                            <div class="row__data">$252,844,036,453 USD</div>
+                            <div class="row__data">$30,504,879,301 USD</div>
+                            <div class="row__data"><a href="#">Visit Website</a></div>
+                        </div>
+                    </div>
+                </div> -->
+
+
+                <div class="responsive-table">
+                    <li class="responsive-table-col table-header">
+                        <div class="col col-1">Name</div>
+                        <div class="col col-2">Description</div>
+                        <div class="col col-3">Market Cap</div>
+                        <div class="col col-4">Volume</div>
+                        <div class="col col-5">Website</div>
+
+                    </li>
+                    <div class="responsive-table-col table-row">
+                        <div class="col col-1" data-label="Name">
+                            <div class="row">
+                                <img src="img/bitcoin.svg" alt="">
+                                Bitcoin
+                                <p class="--tag-layout">BTC</p>
+                            </div>
+
+                        </div>
+                        <div class="col col-2" data-label="Description">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. </div>
+                        <div class="col col-3" data-label="Amount">$252,844,036,453 USD</div>
+                        <div class="col col-4" data-label="Volume">$30,504,879,301 USD</div>
+                        <div class="col col-5" data-label="Website"><a href="https://cfdcircle.vn/"
+                                target="_blank">Visit Website</a>
+                        </div>
+
+
+                    </div>
+                    <div class="responsive-table-col table-row">
+                        <div class="col col-1" data-label="Name">
+                            <div class="row">
+                                <img src="img/ethereum.svg" alt="">
+                                Ethereum
+                                <p class="--tag-layout">ETH</p>
+                            </div>
+                        </div>
+                        <div class="col col-2" data-label="Description">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. </div>
+                        <div class="col col-3" data-label="Amount">$252,844,036,453 USD</div>
+                        <div class="col col-4" data-label="Volume">$30,504,879,301 USD</div>
+                        <div class="col col-5" data-label="Website"><a href="https://cfdcircle.vn/"
+                                target="_blank">Visit Website</a>
+                        </div>
+
+                    </div>
+                    <div class="responsive-table-col table-row">
+                        <div class="col col-1" data-label="Name">
+                            <div class="row">
+                                <img src="img/litecoin.svg" alt="">
+                                Litecoin
+                                <p class="--tag-layout">LTC</p>
+                            </div>
+                        </div>
+                        <div class="col col-2" data-label="Description">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. </div>
+                        <div class="col col-3" data-label="Amount">$252,844,036,453 USD</div>
+                        <div class="col col-4" data-label="Volume">$30,504,879,301 USD</div>
+                        <div class="col col-5" data-label="Website"><a href="https://cfdcircle.vn/"
+                                target="_blank">Visit Website</a>
+                        </div>
+
+                    </div>
+                    <div class=" responsive-table-col table-row">
+                        <div class="col col-1" data-label="Name">
+                            <div class="row">
+                                <img src="img/tron.svg" alt="">
+                                TRON
+                                <p class="--tag-layout">TRX</p>
+                            </div>
+                        </div>
+                        <div class="col col-2" data-label="Description">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. </div>
+                        <div class="col col-3" data-label="Amount">$252,844,036,453 USD</div>
+                        <div class="col col-4" data-label="Volume">$30,504,879,301 USD</div>
+                        <div class="col col-5" data-label="Website"><a href="https://cfdcircle.vn/"
+                                target="_blank">Visit Website</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+    </main>
+    <!-- footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__top-logo">
+                    <a href="">
+                        <img src="img/logo-header.svg" alt="FinanceFlow">
+                    </a>
+                </div>
+                <div class="footer__top-social">
+                    <a href="https://www.instagram.com/" target="_blank"><img src="img/insta.svg" alt="instagram"></a>
+                    <a href="https://www.facebook.com/" target="_blank"><img src="img/facebook.svg" alt="facebook"></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><img src="img/linked-in.svg" alt="linkedin"></a>
+                </div>
+            </div>
+            <div class="footer__center">
+                <div class="footer__center-menu">
+                    <p class="text --text-label">MENU</p>
+                    <div class="menu">
+                        <ul class="menu__item">
+                            <li><a href="./" class="--text-menu --text-tag">HOME</a></li>
+                            <li><a href="about.html" class="--text-menu --text-tag">ABOUT</a></li>
+                            <li><a href="pricing.html" class="--text-menu --text-tag">PRICING</a></li>
+                        </ul>
+                        <ul class="menu__item">
+                            <li><a href="tokens.html" class="--text-menu --text-tag">TOKENS</a></li>
+                            <li><a href="blog.html" class="--text-menu --text-tag">BLOG</a></li>
+                            <li><a href="contact.html" class="--text-menu --text-tag">CONTACT US</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__center-download">
+                    <div class="textbox">
+                        <p class="text --text-label">Download our Application</p>
+                        <p class="des --text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed
+                            nulla
+                            integer</p>
+                    </div>
+                    <div class="btndown --cta">
+                        <a class="btn --btn-main --text-button --pointer" href="https://www.apple.com/vn/app-store/"
+                            target="_blank">
+                            <svg width="23" height="28" viewBox="0 0 23 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_7_87657)">
+                                    <path
+                                        d="M2.89196 24.0589C3.90895 25.5228 5.29949 27.5246 7.09357 27.5246V27.5211H7.18498C7.86984 27.4777 8.53946 27.2985 9.15543 26.9937H9.17267C9.95229 26.6126 10.8069 26.4127 11.6735 26.409C12.5034 26.4181 13.3208 26.6134 14.0664 26.9807H14.0716C14.6946 27.2969 15.38 27.4685 16.0774 27.4829H16.1792C17.9841 27.4559 19.1378 25.939 20.3451 24.1093C21.1739 22.9141 21.8163 21.5983 22.25 20.2075V20.2006C21.5704 19.9123 20.9494 19.4999 20.4184 18.9842C19.832 18.4267 19.3666 17.753 19.0513 17.0054C18.7361 16.2578 18.578 15.4524 18.5868 14.6402C18.6038 13.586 18.8836 12.553 19.4003 11.636C19.9169 10.7191 20.654 9.94773 21.5438 9.39263C20.9766 8.57767 20.2289 7.9069 19.3599 7.43341C18.4909 6.95992 17.5245 6.6967 16.537 6.66459C16.3724 6.64982 16.2249 6.642 16.0989 6.642C15.0096 6.71096 13.9425 6.98378 12.9523 7.44651H12.9316C12.4223 7.69525 11.8757 7.8573 11.3139 7.92609C10.7214 7.86286 10.1448 7.69431 9.61074 7.42827H9.59177C8.73578 7.01896 7.80992 6.77861 6.86419 6.7202H6.78658C5.63538 6.75667 4.51323 7.09321 3.52964 7.69696C2.54603 8.30071 1.73459 9.15105 1.17449 10.165C0.0454163 12.3999 -0.282374 14.9594 0.246607 17.4099C0.663483 19.7824 1.5618 22.0427 2.88536 24.0493L2.89196 24.0589Z"
+                                        fill="white" />
+                                    <path
+                                        d="M11.1 6.344C11.1889 6.35197 11.2781 6.35546 11.3674 6.35443C12.0995 6.31719 12.8157 6.12494 13.4691 5.79023C14.1225 5.4555 14.6987 4.98583 15.1599 4.41178C16.1822 3.18276 16.6844 1.59846 16.5586 0C15.0035 0.163702 13.5668 0.911959 12.535 2.09555C11.5165 3.26402 11.0004 4.79218 11.1 6.344Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_7_87657">
+                                        <rect width="23" height="28" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            APP STORE
+                        </a>
+                        <a class="btn --btn-main --text-button --pointer" href="https://play.google.com/"
+                            target="_blank">
+                            <svg width="23" height="26" viewBox="0 0 23 26" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_7_87667)">
+                                    <path
+                                        d="M16.5186 16.5951L13.066 13.136L1.64111 24.7386C1.75032 24.6974 1.85619 24.6478 1.95776 24.5902L16.5186 16.5951Z"
+                                        fill="white" />
+                                    <path
+                                        d="M0.00850522 1.94005C0.0144238 3.35537 0.107148 22.2236 0.116026 23.4134C0.0902982 23.661 0.125802 23.9112 0.219399 24.1419C0.312996 24.3725 0.4618 24.5764 0.652648 24.7357L12.5668 12.6371L0.600367 0.643494C0.393848 0.785485 0.229684 0.981134 0.125431 1.20951C0.0211803 1.43789 -0.0192362 1.69041 0.00850522 1.94005Z"
+                                        fill="white" />
+                                    <path
+                                        d="M17.1588 8.98105L13.5613 12.6341L17.1627 16.2417L22.1127 13.523C22.7045 13.1953 23.3339 12.36 22.1127 11.6919L17.1588 8.98105Z"
+                                        fill="white" />
+                                    <path
+                                        d="M1.95772 0.659347C1.7996 0.5753 1.62738 0.521278 1.44971 0.5L13.0631 12.1343L16.5156 8.62869L1.95772 0.659347Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_7_87667">
+                                        <rect width="23" height="25" fill="white" transform="translate(0 0.5)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                            PLAY STORY
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__bottom-coppy --text-body-small">© 2023 CFD Circle, Inc.</p>
+                <svg class="footer__bottom-backtotop --pointer" width="16" height="20" viewBox="0 0 16 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 18.9375L8 1.875M14.5 7.5625L8 1.0625L1.5 7.5625" stroke="white" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+<script src="dest/jsmain.min.js"></script>
+<script src="dest/main.js"></script>
+
+
+</html>

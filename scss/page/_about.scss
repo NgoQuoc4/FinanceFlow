@@ -1,0 +1,278 @@
+.main__about{
+.about{
+    padding-top: calc(var(--height-header) + 60px);
+    padding-bottom: 116px;
+    .container{
+        
+    }
+    
+    @include xs{
+        .about__content{
+            grid-column: 3/11;
+        }
+    }
+    @include xs{
+        .about__content{
+            grid-column: 2/12;
+        }
+    }
+    @include xxs{
+        padding-top: calc(var(--height-header) + 49px);
+        padding-bottom: 48px;
+        .about__content{
+            text-align: left;
+            grid-column: 1/13;
+        }
+    }
+}
+
+.scdrives{
+    position: relative;
+    .scdrives__blur{
+        position: absolute;
+        top: 15%;
+        left: 25%;
+        width: 951px;
+        height: 951px;
+        transform: translate(-50%, -50%);
+        overflow-x: hidden;
+        filter: blur(48.2591590881px);
+        opacity: 0.4;
+        z-index: -1;
+    }
+
+    .scdrives__textbox{
+        gap: 16px;
+        margin-bottom: 29px;
+    }
+    .scdrives__box{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--gap);
+        .scdrives__box-item{
+            background-color: var(--cl-blue);
+            width: 100%;
+            height: 100%;
+            border-radius: 40px;
+            padding: 58px 32px;
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            .textbox{
+                .textbox__heading{
+                    margin-bottom: 7px;
+                }
+            }
+        }
+    }
+
+    @include sm{
+        .scdrives__box-item{
+            grid-column: 1/3;
+        }
+    }
+
+    @include xxs{
+        .scdrives__textbox{
+            margin-bottom: 16px;
+        }
+        .scdrives__box-item{
+            flex-direction: column;
+        }
+    }
+}
+
+
+
+.sccontent{
+    padding-top: 232px;
+    padding-bottom: 180px;
+    overflow: hidden;
+    .container{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap: var(--gap);
+        align-items: center;
+    }
+    .sccontent__textbox{
+        grid-column: 1/8;
+        padding-right: 76px;
+
+        .sccontent__textbox-info{
+            margin-bottom: 76px;
+            .heading{
+                margin-bottom: 16px;
+            }
+            .des:not(:last-child){
+                margin-bottom: 30px;
+            }
+        }
+        .sccontent__textbox-info:last-child{
+            margin-bottom: initial;
+        }
+    }
+    .sccontent__thumb{
+        grid-column: 8/13;
+        .sccontent__thumb-1{
+            max-width: initial;
+        }
+        .sccontent__thumb-planet{
+            display: none;
+        }
+    }
+
+    @include xs{
+        padding-top: 59px;
+        padding-bottom: 105px;
+        .sccontent__textbox{
+            padding-right: initial;
+            grid-column: 1/13;
+        }
+        .sccontent__thumb{
+            grid-column: 1/13;
+            margin-top: 64px;
+            .sccontent__thumb-1{
+                display: none;
+
+            }
+            .sccontent__thumb-planet{
+                display: block;
+                max-width: 100%;
+                
+            }
+        }
+    }
+}
+
+.sctimeline{
+    padding-bottom: 132px;
+    .container{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap: var(--gap);
+    }
+    .sctimeline__textbox {
+        grid-column: 1/6;
+        position: sticky;
+        top: calc(var(--height-header) + 20px) ;
+        align-self: start;
+        padding-right: 76px;
+        .sctimeline__textbox-heading{
+            margin-bottom: 16px;
+        }
+    }
+    .sccontent__content{
+        grid-column: 6/13;
+        .sccontent__content-item {
+            padding-left: 50px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #FFF;
+            margin-bottom: 80px;
+            .number{
+                position: relative;
+                &::after{
+                    content: "";
+                    @include circle-box(24px, 24px, true);
+                    position: absolute;
+                    top: 50%;
+                    left: -58%;
+                    background-color: var(--cl-white);
+                    transform: translate(-50%, -50%);
+                }
+            }
+            .heading{
+                margin: 22px 0 12px 0;
+                text-transform: var(--text-uppercase);
+            }
+        }
+        .sccontent__content-item:last-child{
+            margin-bottom: initial;
+        }
+    }
+    @include sm{
+        .sctimeline__textbox{
+            padding-right: initial;
+        }
+    }
+    @include xs{
+        padding-bottom: 104px;
+        .sctimeline__textbox{
+            grid-column: 1/13;
+            margin-bottom: 40px;
+            position: initial;
+        }
+        .sccontent__content{
+            grid-column: 1/13;
+            .sccontent__content-item{
+                margin-bottom: 56px;
+                .number{
+                     &::after{
+                        @include circle-box(18px, 18px, true);
+                     }
+                }
+            }
+        }
+    }
+}
+
+.scteam{
+    .scteam__textbox{
+        margin-bottom: 49px;
+    }
+    .scteam_box{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: var(--gap);
+        .scteam_box-item{
+            background-color: var(--cl-blue);
+            padding: 24px;
+            border-radius: 40px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            .thumb{
+                @include frameimg(327,400); 
+                 border-radius: 32px; 
+                img{
+                   
+                    @include midimg;
+                }
+                
+            }
+            .info{
+                padding-top: 32px;
+                text-align: center;
+                font-size: 1.6rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+    @include xs{
+        .scteam__textbox{
+            margin-bottom: 40px;
+        }
+        .scteam_box{
+            .scteam_box-item{
+                grid-column: 1/4;
+            }
+        }
+    }
+}
+.scsponsor{
+    padding-top: 126px;
+    padding-bottom: 230px;
+    .scsponsor__textbox{
+        margin-bottom: 40px;
+            .scsponsor__textbox-text{
+                margin-bottom: 16px;
+            }
+    }
+    @include xxs{
+        padding: 80px 0;
+         .scsponsor__textbox{
+            margin-bottom: 48px;
+            text-align: center;
+         }
+    }
+}
+}

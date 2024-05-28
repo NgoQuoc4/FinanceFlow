@@ -1,0 +1,44 @@
+html{
+    font-size: 62.5%;
+    body{
+        width: 100%;
+        margin: auto;
+        max-width: var(--max-width-page);
+        scroll-behavior: smooth;
+        font-size: var(--text-bd-fs);
+        line-height: var(--text-bd-lh);
+        letter-spacing: var(--text-bd-lp);
+        font-family: dr;
+        color: var(--cl-white);
+        background-color: var(--cl-dark-blue);
+        overflow-x:hidden;
+        &.--active{
+            overflow: hidden;
+        }
+        .container{
+            width: 100%;
+            max-width: var(--max-width-container);
+            padding: 0 var(--padding-container);
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+        .main{
+            position: relative;
+            section{
+                &.--pdtb{
+                    padding: var(--pd-section) 0; 
+                }
+                &.--pdt{
+                    padding-top: var(--pd-section);
+                }
+                &.--pdb{
+                    padding-bottom: var(--pd-section);
+                }
+            }
+        }
+        // &.--active{
+        //     overflow:hidden;
+        // }
+    }
+}
